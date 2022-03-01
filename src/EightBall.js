@@ -33,11 +33,20 @@ function EightBall ({ answers }) {
     setAnswer(newAnswer);
   }
 
+  function resetEightBall(){
+    setAnswer({msg: "think of a question", color: "black"});
+  }
+
   return (
-    <div className="EightBall" 
-          onClick={() => getRandomAnswer(answers)} 
-          style={{backgroundColor: answer.color}}>
-      <p className="EightBall-msg">{answer.msg}</p>
+    <div>
+      <div className="EightBall" 
+            onClick={() => getRandomAnswer(answers)} 
+            style={{backgroundColor: answer.color}}>
+        <p className="EightBall-msg">{answer.msg}</p>
+      </div>
+      <div>
+        <button id= "EightBall-reset" onClick={() => resetEightBall()}>Reset</button>
+      </div>
     </div>
   );
 }
