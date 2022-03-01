@@ -1,7 +1,17 @@
 import './App.css';
 import EightBall from './EightBall';
 
+/** Render EightBall component.
+ *
+ * Pass in array of objects
+ * 
+ * example: [{ msg: "It is decidedly so.", color: "green" }, ...]
+ *
+ * index -> App -> EightBall
+ * 
+ */
 function App() {
+  //Try import array from different file
   const answers = [
     { msg: "It is certain.", color: "green" },
     { msg: "It is decidedly so.", color: "green" },
